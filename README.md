@@ -15,23 +15,25 @@ wrong quotes. It is strongly recommended to check every quote on your own.**
 - [x] Herausgeber*innen eines Buches
 - [x] E-Book / PDF-Dokument
 - [x] Kapitel oder Artikel in einem Buch mit Herausgeber
-- [ ] Konferenzbeitrag (print)
 - [ ] Konferenzbeitrag (online)
-- [ ] Artikel in einer Zeitschrift (print)
 - [ ] Artikel in einer Zeitschrift (online)
-- [ ] Artikel in einer Zeitung
-- [ ] Bachelorarbeit und andere Hochschulschriften (print / online)
-- [ ] Patent
-- [ ] Norm
 - [ ] Beitrag auf einer Website
 - [ ] Beitrag in einer Faktendatenbank
 - [ ] Beitrag in einem Online-Nachschlagewerk
 - [ ] YouTube-Video
-- [ ] Blog
-- [ ] Interview (nicht veröffentlicht)
-- [ ] E-Mail
-- [ ] Software
-- [ ] Gesetze
+
+### Not supported
+- Blog
+- Interview (nicht veröffentlicht)
+- E-Mail
+- Software
+- Gesetze
+- Artikel in einer Zeitung
+- Bachelorarbeit und andere Hochschulschriften (print / online)
+- Patent
+- Norm
+- Artikel in einer Zeitschrift (print)
+- Konferenzbeitrag (print)
 
 ## Supported sources
 - [x] THI library
