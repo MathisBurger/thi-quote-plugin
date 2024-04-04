@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "THI Quote",
+  "description": "Generates quotes by the THI quote guidelines",
+  "version": "1.0",
+  "action": {
+    "default_popup": "page.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["app.js"],
+      "matches": [
+        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do"
+      ]
+    }
+  ]
+}
