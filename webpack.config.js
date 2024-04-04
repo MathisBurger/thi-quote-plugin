@@ -5,7 +5,8 @@ const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const outputPath = 'dist';
 const entryPoints = {
-    main: path.resolve(__dirname, 'src', 'app.ts'),
+    content_script: path.resolve(__dirname, 'src', 'app.ts'),
+    page: path.resolve(__dirname, 'src', 'page.ts')
 };
 
 module.exports = {
