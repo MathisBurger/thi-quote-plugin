@@ -6,9 +6,13 @@
   "action": {
     "default_popup": "page.html"
   },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
   "content_scripts": [
     {
-      "js": ["src/app.js"],
+      "js": ["dist/main.js"],
       "matches": [
         "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do*"
       ]
