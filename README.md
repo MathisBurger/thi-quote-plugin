@@ -3,7 +3,8 @@
 This is a chrome extension explicitly built to generate bibliography from the THI library. 
 It can be used by opening the extension popup while in the current tab there is a supported source.
 
-
+**NOTE: This project is no official THI project. It is a personal project and I do not take responsibility for 
+wrong quotes. It is strongly recommended to check every quote on your own.**
 
 ## Supported ways to cite
 
