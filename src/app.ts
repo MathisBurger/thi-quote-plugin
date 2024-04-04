@@ -1,5 +1,6 @@
 import Book from "./dataTypes/Book";
 import {QuoteObject} from "./typings/QuoteObject";
+import tabId = chrome.devtools.inspectedWindow.tabId;
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     let quoteObject: QuoteObject = null;

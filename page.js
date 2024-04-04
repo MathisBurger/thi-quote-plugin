@@ -2,7 +2,7 @@ const updateCallback = (response) => {
     document.getElementById("thi-quote-display").innerHTML = response.text;
 }
 
-document.getElementById('generateBtn').onclick = async () => {
+document.body.onfocus = async () => {
     const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
     for (const pass of [1, 2]) {
         try {
