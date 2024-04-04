@@ -1,6 +1,10 @@
 import {QuoteObject} from "../typings/QuoteObject";
 
+/**
+ * Book that implements all sources from THI library
+ */
 class Book implements QuoteObject {
+
     readonly author: string[];
     readonly title: string;
     readonly releaseYear: string;
@@ -9,6 +13,9 @@ class Book implements QuoteObject {
     readonly publisher: string;
     readonly isEBook: boolean;
 
+    /**
+     * Default constructor
+     */
     constructor() {
         this.author = this.getAuthors();
         this.title = this.getTitle();
@@ -19,6 +26,9 @@ class Book implements QuoteObject {
         this.isEBook = this.getTitleTableAttribute("Erscheinungsform").indexOf("E-Book") > -1;
     }
 
+    /**
+     * @inheritDoc
+     */
     generateQuote(): string {
         if (this.edition === null) {
             return `${this.getAuthorString()} ${this.getHg()}(${this.releaseYear}) <i>${this.title}</i>${this.isEBook ? " [Online]" : ""}, ${this.publisherLocation}, ${this.publisher}. ${this.getAccessedAt()}`;
@@ -27,6 +37,10 @@ class Book implements QuoteObject {
         }
     }
 
+    /**
+     * Gets the accessedAt of e books
+     * @private
+     */
     private getAccessedAt(): string {
         if (this.isEBook) {
             const doiLink = this.getTitleTableAttribute("DOI");
@@ -39,6 +53,10 @@ class Book implements QuoteObject {
         return "";
     }
 
+    /**
+     * Gets the author string of a book
+     * @private
+     */
     private getAuthorString(): string {
         if (this.author.length === 1) {
             return this.author[0];
@@ -51,6 +69,10 @@ class Book implements QuoteObject {
         }
     }
 
+    /**
+     * Gets the HGs of a book
+     * @private
+     */
     private getHg(): string {
         if (this.author[0].endsWith("[Herausgeber]")) {
             return "(Hg.) ";
@@ -58,6 +80,10 @@ class Book implements QuoteObject {
         return "";
     }
 
+    /**
+     * Sets all authors
+     * @private
+     */
     private getAuthors(): string[] {
         let elements = document.getElementsByClassName("author")[0].children;
         let arr = [];
@@ -74,10 +100,20 @@ class Book implements QuoteObject {
             .map((a) => a.indexOf("(")> -1 ? a.substring(0, a.indexOf("(")-1) : a);
     }
 
+    /**
+     * Sets the title of a book
+     * @private
+     */
     private getTitle(): string {
         return (document.getElementsByClassName("title")[0] as HTMLElement).innerText;
     }
 
+    /**
+     * Gets a specific table attribute from the data table
+     *
+     * @param attr The attribute
+     * @private
+     */
     private getTitleTableAttribute(attr: string): string {
         let table = document
             .getElementsByClassName("titleinfo")[0]

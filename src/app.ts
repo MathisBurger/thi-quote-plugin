@@ -1,5 +1,10 @@
 import Book from "./dataTypes/Book";
 import {QuoteObject} from "./typings/QuoteObject";
+import {Message} from "./typings/Message";
+
+/**
+ * Default content fetch worker
+ */
 chrome.runtime.onMessage.addListener(async function(message, sender, sendResponse) {
     let quoteObject: QuoteObject = null;
     switch (location.origin) {
@@ -9,6 +14,6 @@ chrome.runtime.onMessage.addListener(async function(message, sender, sendRespons
     }
 
     if (quoteObject) {
-        sendResponse({text: quoteObject.generateQuote()});
+        sendResponse({text: quoteObject.generateQuote()} as Message);
     }
 });
