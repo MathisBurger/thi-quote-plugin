@@ -69,7 +69,9 @@ class Book implements QuoteObject {
                 arr.push(split.splice(0, 1).join('. ') + '.');
             }
         }
-        return arr;
+        return arr
+            .map((a) => a.replace("[Herausgeber]", ""))
+            .map((a) => a.indexOf("(")> -1 ? a.substring(0, a.indexOf("(")-1) : a);
     }
 
     private getTitle(): string {

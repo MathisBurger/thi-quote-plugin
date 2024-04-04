@@ -8,13 +8,16 @@
   },
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "background",
+    "scripting"
   ],
   "content_scripts": [
     {
       "js": ["dist/main.js"],
       "matches": [
-        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do*"
+        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do*",
+        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/search.do*"
       ]
     }
   ]

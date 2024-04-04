@@ -2,14 +2,16 @@ const updateCallback = (response) => {
     document.getElementById("thi-quote-display").innerHTML = response.text;
 }
 
-document.body.onfocus = async () => {
+const exec = async () => {
     const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
     for (const pass of [1, 2]) {
         try {
-            await chrome.tabs.sendMessage(tab.id, {focusPointsInMilliseconds: 1000}, updateCallback);
+            await chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['dist/main.js']})
+            await chrome.tabs.sendMessage(tab.id, {tabId: tab.id}, updateCallback);
             break;
         } catch (err) {
-            await chrome.scripting.executeScript({target: {tabId}, files: ['dist/main.js']})
+
         }
     }
 };
+exec();
