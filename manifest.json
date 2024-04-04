@@ -8,9 +8,9 @@
   },
   "content_scripts": [
     {
-      "js": ["app.js"],
+      "js": ["src/app.js"],
       "matches": [
-        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do"
+        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do*"
       ]
     }
   ]

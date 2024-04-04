@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "npx tsc app.ts"
+    "compile": "npx tsc src/app.ts && npx webpack"
   },
   "keywords": [],
   "author": "",
