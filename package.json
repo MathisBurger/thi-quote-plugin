@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode production --watch"
+    "dev": "webpack --mode production --watch",
+    "package": "npm run build && zip -vr thi-quote-plugin.zip dist/ page.html manifest.json"
   },
   "keywords": [],
   "author": "",
