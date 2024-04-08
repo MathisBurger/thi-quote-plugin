@@ -10,14 +10,16 @@
     "activeTab",
     "tabs",
     "background",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "content_scripts": [
     {
       "js": ["dist/content_script.js"],
       "matches": [
         "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do*",
-        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/search.do*"
+        "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/search.do*",
+        "https://youtube.com/watch*"
       ]
     }
   ]

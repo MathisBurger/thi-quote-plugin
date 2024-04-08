@@ -1,4 +1,5 @@
 import {QuoteObject} from "../typings/QuoteObject";
+import DateUtil from "../util/DateUtil";
 
 /**
  * Book that implements all sources from THI library
@@ -46,9 +47,7 @@ class Book implements QuoteObject {
             const doiLink = this.getTitleTableAttribute("DOI");
             const permaLink = this.getTitleTableAttribute("Permalink");
             const link = doiLink ? `https://doi.org/${doiLink}` : permaLink
-            const date = new Date();
-            const formattedDate = `${date.getDate() < 10 ? "0" + date.getDate() : date.getDate()}.${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}.${date.getFullYear()}`
-            return `Verfügbar unter ${link} (Abgerufen am ${formattedDate}).`
+            return `Verfügbar unter ${link} (Abgerufen am ${DateUtil.getTodayDate()}).`
         }
         return "";
     }
