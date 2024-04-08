@@ -2,11 +2,19 @@
 
 ***~Der eine Anwendungsfall für den SAP keine Lösung hat.***
 
-This is a chrome extension explicitly built to generate bibliography from the THI library. 
+This is a Chrome extension explicitly built to generate bibliography from the THI library. 
 It can be used by opening the extension popup while in the current tab there is a supported source.
 
 **NOTE: This project is no official THI project. It is a personal project and I do not take responsibility for 
 wrong quotes. It is strongly recommended to check every quote on your own.**
+
+## Installation
+
+1. Download the .zip file from the latest release
+2. Unzip it to a destination you want.
+3. Open `chrome://extensions` in your Chrome instance.
+4. Press `Load unpacked` and select your unzipped folder
+5. Your done!
 
 ## Supported ways to cite
 
