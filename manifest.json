@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "THI Quote",
   "description": "Generates quotes by the THI quote guidelines",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "action": {
     "default_popup": "page.html"
   },
