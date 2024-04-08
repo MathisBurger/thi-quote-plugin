@@ -2,6 +2,7 @@ import Book from "./dataTypes/Book";
 import {QuoteObject} from "./typings/QuoteObject";
 import {Message} from "./typings/Message";
 import YoutubeVideo from "./dataTypes/YoutubeVideo";
+import IEEE from "./dataTypes/IEEE";
 /**
  * Default content fetch worker
  */
@@ -14,6 +15,9 @@ chrome.runtime.onMessage.addListener(async function(message, sender, sendRespons
         case "https://youtube.com":
         case "https://www.youtube.com":
             quoteObject = new YoutubeVideo();
+            break;
+        case "https://ieeexplore-ieee-org.thi.idm.oclc.org":
+            quoteObject = new IEEE();
             break;
     }
 

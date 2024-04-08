@@ -19,7 +19,8 @@
       "matches": [
         "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/singleHit.do*",
         "https://opac-ku-de.thi.idm.oclc.org/TouchPoint/search.do*",
-        "https://youtube.com/watch*"
+        "https://youtube.com/watch*",
+        "https://ieeexplore-ieee-org.thi.idm.oclc.org/document/*"
       ]
     }
   ]

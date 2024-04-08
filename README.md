@@ -1,5 +1,7 @@
 # THI quote plugin
 
+***~Der eine Anwendungsfall für den SAP keine Lösung hat.***
+
 This is a chrome extension explicitly built to generate bibliography from the THI library. 
 It can be used by opening the extension popup while in the current tab there is a supported source.
 
@@ -15,12 +17,9 @@ wrong quotes. It is strongly recommended to check every quote on your own.**
 - [x] Herausgeber*innen eines Buches
 - [x] E-Book / PDF-Dokument
 - [x] Kapitel oder Artikel in einem Buch mit Herausgeber
-- [ ] Konferenzbeitrag (online)
-- [ ] Artikel in einer Zeitschrift (online)
-- [ ] Beitrag auf einer Website
-- [ ] Beitrag in einer Faktendatenbank
-- [ ] Beitrag in einem Online-Nachschlagewerk
-- [ ] YouTube-Video
+- [x] Konferenzbeitrag (online)
+- [x] Artikel in einer Zeitschrift (online)
+- [x] YouTube-Video
 
 ### Not supported
 - Blog
@@ -34,10 +33,11 @@ wrong quotes. It is strongly recommended to check every quote on your own.**
 - Norm
 - Artikel in einer Zeitschrift (print)
 - Konferenzbeitrag (print)
+- Beitrag auf einer Website
 
 ## Supported sources
 - [x] THI library
-- [ ] IEEE
+- [x] IEEE
 - [ ] ...
 
 ## Contribute
