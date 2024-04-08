@@ -1,12 +1,30 @@
 import {QuoteObject} from "../typings/QuoteObject";
 import DateUtil from "../util/DateUtil";
 
-
+/**
+ * Youtube video page instance
+ */
 class YoutubeVideo implements QuoteObject {
 
+    /**
+     * Title of the video
+     * @private
+     */
     private readonly title: string;
+    /**
+     * Year of the video
+     * @private
+     */
     private readonly year: string;
+    /**
+     * Author of the video
+     * @private
+     */
     private readonly author: string;
+    /**
+     * The url of the video
+     * @private
+     */
     private readonly url: string;
 
 
@@ -21,6 +39,9 @@ class YoutubeVideo implements QuoteObject {
     }
 
 
+    /**
+     * @inheritDoc
+     */
     generateQuote(): string {
         return `<i>${this.title}</i> (${this.year}) YouTube Video, hinzugefügt von ${this.author} [Online]. Verfügbar unter ${this.url} (Abgerufen am ${DateUtil.getTodayDate()}).`;
     }
